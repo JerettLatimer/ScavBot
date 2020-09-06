@@ -39,9 +39,24 @@ async def on_ready():
 #commands-----------------------------------------------------------------------------------------------------------------------------
 
 bot = commands.Bot(command_prefix='$')
+bot.remove_command('help')
+
+@bot.command(name='help')
+async def help_command(ctx):
+    help_title = "Scav Bot Help"
+    help_desc = """
+    ***Usage:***
+    Scav Bot uses the prefix "$" followed by a specified command. 
+    Type $commands for a list of commands and their usage.
+    """
+    embed = discord.Embed(
+        title = help_title,
+        description = help_desc,
+        )
+    await ctx.send(embed = embed)
 
 @bot.command(name='ping')
-async def scott_command(ctx, member: discord.Member):
+async def ping_command(ctx, member: discord.Member):
     for x in range(15):
         await ctx.send(member.mention)
          
