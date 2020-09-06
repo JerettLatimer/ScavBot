@@ -48,6 +48,8 @@ async def help_command(ctx):
     ***Usage:***
     Scav Bot uses the prefix "$" followed by a specified command. 
     Type $commands for a list of commands and their usage.
+
+    Bot developed by Jerett Latimer (Southpaw#5272)
     """
     embed = discord.Embed(
         title = help_title,
@@ -55,11 +57,24 @@ async def help_command(ctx):
         )
     await ctx.send(embed = embed)
 
+@bot.command(name='commands')
+async def help_command(ctx):
+    commands_title = "Commands"
+    commands_desc = """
+    ***$ping  @user               Pings a specified user, 15 times.***
+    ***$help                      Displays basic help info.***
+    ***$price  item phrase        Queries https://tarkov-market.com to get the price of an item on the flea market.***
+    """
+    embed = discord.Embed(
+        title = commands_title,
+        description = commands_desc,
+        )
+    await ctx.send(embed = embed)
+
 @bot.command(name='ping')
 async def ping_command(ctx, member: discord.Member):
     for x in range(15):
-        await ctx.send(member.mention)
-         
+        await ctx.send(member.mention)    
 
 @bot.command(name='price')
 async def price_command(ctx, *message):
@@ -90,10 +105,8 @@ async def price_command(ctx, *message):
         title = result_element_title,
         description = result_element_price,
         )
-
         embed.set_image(url = result_picture_source)
         embed.set_footer(text = 'Bot by Jerett L.')
-
         await ctx.send(embed = embed)
     else:
         response = "Unable to find item. Try again."
