@@ -1,6 +1,6 @@
 # ScavBot
 
-## A Discord bot that assists players in the popular realistic survival FPS game Escape From Tarkov. Utilizes ***Selenium*** and ***Discord.py*** libraries.
+## A Discord bot that assists players in the popular realistic survival FPS game Escape From Tarkov.
 
 ## Built With:
  * Selenium
