@@ -46,28 +46,39 @@ async def help_command(ctx):
     help_title = "Scav Bot Help"
     help_desc = """
     ***Usage:***
-    Scav Bot uses the prefix "$" followed by a specified command. 
-    Type $commands for a list of commands and their usage.
+    > Scav Bot uses the prefix "$" followed by a specified command. 
 
-    Bot developed by Jerett Latimer (Southpaw#5272)
+    > Type $commands for a list of commands and their usage.
+
+    > Scav Bot is open source. To create a pull request or suggest new features visit the GitHub link below.
+
+    > GitHub Repo: https://github.com/JerettLatimer/ScavBot
+
     """
     embed = discord.Embed(
         title = help_title,
         description = help_desc,
         )
+    embed.set_footer(text = 'Bot developed by Jerett Latimer (Southpaw#5272)')
+
     await ctx.send(embed = embed)
 
 @bot.command(name='commands')
-async def help_command(ctx):
+async def commands_command(ctx):
     commands_title = "Commands"
     commands_desc = """
-    ***$ping  @user               Pings a specified user, 15 times.***
-    ***$help                      Displays basic help info.***
-    ***$price  item phrase        Queries https://tarkov-market.com to get the price of an item on the flea market.***
+    > ***$help***
+    > Displays basic help info.
+
+    > ***$ping***  *@user*
+    > Pings a specified user, 15 times.
+
+    > ***$price***  *item phrase*
+    > Queries https://tarkov-market.com to get the price of an item on the flea market.
     """
     embed = discord.Embed(
         title = commands_title,
-        description = commands_desc,
+        description = commands_desc
         )
     await ctx.send(embed = embed)
 
