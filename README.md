@@ -24,6 +24,6 @@
 * ***help***
   * General bot information such as prefix, useful commands, and repository information.
   
-  #### Sample Run
+#### Sample Run
   
-  ![demo](http://g.recordit.co/7dVzDSRmTE.gif)
+![demo](http://g.recordit.co/7dVzDSRmTE.gif)
