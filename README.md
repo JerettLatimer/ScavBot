@@ -1,6 +1,10 @@
 # ScavBot
 
-## A work in progress Discord bot to assist with the popular realistic survival shooter game Escape From Tarkov. 
+## A Discord bot that assists players in the popular realistic survival FPS game Escape From Tarkov.
+
+## Built With:
+ * Selenium
+ * Discord.py
 
 ### Features
 
@@ -8,7 +12,18 @@
 * Current commands are:
   * ping
   * price
+  * commands
+  * help
 * ***ping***
-  * The ***ping*** commmand must be accompanied with a mention of another user. It will then spam ping the mentioned user 15 times.
+  * Pings the mentioned user 15 times.
 * ***price***
-  * The ***price*** command uses Selenium to interact with https://tarkov-market.com which keeps updated records on the flea market prices of items in the game.
+  * Utilizes Selenium to interact with https://tarkov-market.com which keeps updated records on the flea market prices of items in the game. It returns
+  the name, current market price, and a picture of the requested item in a *embed* object.
+* ***commands***
+  * Returns a list of all current commands with usage format and a description.
+* ***help***
+  * General bot information such as prefix, useful commands, and repository information.
+  
+#### Sample Run
+  
+![demo](http://g.recordit.co/7dVzDSRmTE.gif)
