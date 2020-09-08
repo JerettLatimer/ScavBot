@@ -45,7 +45,7 @@ bot.remove_command('help')
 async def help_command(ctx):
     help_title = "Scav Bot Help"
     help_desc = """
-    ***Usage:***
+    ***Usage:***\n
     > Scav Bot uses the prefix "$" followed by a specified command. 
 
     > Type $commands for a list of commands and their usage.
@@ -65,15 +65,18 @@ async def help_command(ctx):
 
 @bot.command(name='commands')
 async def commands_command(ctx):
-    commands_title = "Commands"
+    commands_title = "Commands:"
     commands_desc = """
+    > ***$commands***
+    > Displays complete list of commands.
+
     > ***$help***
     > Displays basic help info.
 
-    > ***$ping***  *@user*
+    > ***$ping***  *{@user}*
     > Pings a specified user, 15 times.
 
-    > ***$price***  *item phrase*
+    > ***$price***  *{item phrase}*
     > Queries https://tarkov-market.com to get the price of an item on the flea market.
     """
     embed = discord.Embed(
